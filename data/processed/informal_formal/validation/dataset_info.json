@@ -1,0 +1,16 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "informal_text": {
+      "dtype": "large_string",
+      "_type": "Value"
+    },
+    "formal_text": {
+      "dtype": "large_string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}
