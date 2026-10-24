@@ -28,6 +28,10 @@ class ConverterTests(unittest.TestCase):
             "best friend, that outfit is excellent or cool!",
         )
 
+    def test_lol_expands_to_laugh_out_loud(self):
+        self.assertEqual(slang_to_formal("lol"), "laugh out loud")
+        self.assertEqual(formal_to_slang("laugh out loud"), "lol")
+
     def test_multiword_slang_is_matched_before_single_words(self):
         self.assertEqual(slang_to_formal("No cap, let them cook."), "truthfully, let someone continue with their idea.")
 

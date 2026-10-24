@@ -24,7 +24,7 @@ SLANG_TO_FORMAL = {
     "rn": "right now",
     "omg": "oh my goodness",
     "bro": "friend",
-    "lol": "",
+    "lol": "laugh out loud",
     "gr8": "great",
     "asap": "as soon as possible",
     "sus": "suspicious",
@@ -330,6 +330,7 @@ SLANG_TO_FORMAL = {
 
 FORMAL_TO_SLANG = {
     "I don't know": "idk",
+    "laugh out loud": "lol",
     "I do not know": "idk",
     "I do not remember": "idr",
     "in my opinion": "imo",
@@ -510,7 +511,7 @@ def slang_to_formal(text: str) -> str:
     for slang, formal in replacements:
         result = _replace_word(result, slang, formal)
 
-    # Clean spaces left by removed slang such as "lol"
+    # Normalize spaces around any empty glosses and removed formatting.
     result = re.sub(r"\s+", " ", result)
 
     # Remove spaces before punctuation
